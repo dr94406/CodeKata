@@ -1,6 +1,7 @@
 package com.example.sdjpa.apicontroller;
 
-import com.example.sdjpa.dto.CommonResponse;
+import com.example.sdjpa.dto.response.CommonResponse;
+import com.example.sdjpa.dto.response.PersonResponse;
 import com.example.sdjpa.entity.Person;
 import com.example.sdjpa.service.PersonService;
 import lombok.RequiredArgsConstructor;
@@ -18,8 +19,9 @@ public class PersonApiController {
     private final PersonService personService;
 
     @PostMapping(path = "api/v1/jpa", produces = APPLICATION_JSON_VALUE)
-    public Person save(@RequestBody Person person) {
-        return personService.save(person);
+    public PersonResponse save(@RequestBody Person person) {
+         return personService.save(person);
+
     }
 
     @GetMapping(path = "/api/v1/jpa/{id}", produces = APPLICATION_JSON_VALUE)
@@ -28,7 +30,7 @@ public class PersonApiController {
     }
 
     @GetMapping(path = "/api/v1/jpa", produces = APPLICATION_JSON_VALUE)
-    public List<Person> findAll() {
+    public List<PersonResponse> findAll() {
         return personService.findAll();
     }
 
