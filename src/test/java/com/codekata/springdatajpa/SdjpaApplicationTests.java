@@ -1,4 +1,4 @@
-package com.example.sdjpa;
+package com.codekata.springdatajpa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

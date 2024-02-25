@@ -1,4 +1,4 @@
-package com.example.sdjpa.dto.response;
+package com.codekata.springdatajpa.dto.response;
 
 import lombok.Builder;
 import org.springframework.http.HttpStatus;

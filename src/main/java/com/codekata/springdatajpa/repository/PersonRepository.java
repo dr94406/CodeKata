@@ -1,6 +1,6 @@
-package com.example.sdjpa.repository;
+package com.codekata.springdatajpa.repository;
 
-import com.example.sdjpa.entity.Person;
+import com.codekata.springdatajpa.entity.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

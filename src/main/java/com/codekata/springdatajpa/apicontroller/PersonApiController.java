@@ -1,9 +1,9 @@
-package com.example.sdjpa.apicontroller;
+package com.codekata.springdatajpa.apicontroller;
 
-import com.example.sdjpa.dto.response.CommonResponse;
-import com.example.sdjpa.dto.response.PersonResponse;
-import com.example.sdjpa.entity.Person;
-import com.example.sdjpa.service.PersonService;
+import com.codekata.springdatajpa.entity.Person;
+import com.codekata.springdatajpa.dto.response.CommonResponse;
+import com.codekata.springdatajpa.dto.response.PersonResponse;
+import com.codekata.springdatajpa.service.PersonService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

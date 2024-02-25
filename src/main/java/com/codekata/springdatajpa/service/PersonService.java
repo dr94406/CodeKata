@@ -1,8 +1,8 @@
-package com.example.sdjpa.service;
+package com.codekata.springdatajpa.service;
 
-import com.example.sdjpa.dto.response.PersonResponse;
-import com.example.sdjpa.entity.Person;
-import com.example.sdjpa.repository.PersonRepository;
+import com.codekata.springdatajpa.entity.Person;
+import com.codekata.springdatajpa.repository.PersonRepository;
+import com.codekata.springdatajpa.dto.response.PersonResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
