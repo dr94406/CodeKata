@@ -1,6 +1,7 @@
 package com.codekata.springdatajpa.dto.response;
 
 import com.codekata.springdatajpa.entity.Person;
+
 import lombok.Builder;
 
 @Builder
