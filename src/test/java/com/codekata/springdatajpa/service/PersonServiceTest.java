@@ -2,6 +2,7 @@ package com.codekata.springdatajpa.service;
 
 import com.codekata.springdatajpa.entity.Person;
 import com.codekata.springdatajpa.repository.PersonRepository;
+import io.micrometer.common.util.StringUtils;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -10,6 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -93,6 +95,22 @@ class PersonServiceTest {
 
         //then
         assertEquals(personRepository.findAll().stream().count(), count);
+    }
+
+    @Test
+    @DisplayName("회원 이름이 빈 값인지 확인한다.")
+    void ValidPersonName() {
+
+        //given
+        Person person = Person.builder().name("김 치 민").build();
+        personRepository.save(person);
+
+        //when
+        boolean nullValue = StringUtils.isEmpty(person.getName()) || Objects.isNull(person.getName());
+
+        //then
+        assertEquals(nullValue, false);
+
     }
 
     @Test
